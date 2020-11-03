@@ -167,7 +167,7 @@ public class Maze {
 
         Maze maze = new Maze(mazeMatrix);
 
-        System.out.println("\n Follow the path below to get to the cheese: \n");
+        System.out.println("\nFollow the path below to get to the cheese: \n");
         System.out.println(maze.solve(new Node(0, 0, null)));
     }
 }
