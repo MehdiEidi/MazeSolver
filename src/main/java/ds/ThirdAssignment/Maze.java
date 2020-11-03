@@ -157,16 +157,17 @@ public class Maze {
     }
 
     public static void main(String[] args) {
-        int[][] mazeMatrix = new int[][] { {0,0,1,0,1,1,0},
-                                           {1,0,0,1,0,0,0},
-                                           {1,0,0,1,0,0,1},
-                                           {1,1,0,0,1,0,0},
-                                           {0,0,0,0,1,0,1},
-                                           {0,1,0,1,0,0,2},
-                                           {0,0,0,0,0,1,0} };
+        int[][] mazeMatrix = new int[][] { {0, 0, 1, 0, 1, 1, 0},
+                                           {1, 0, 0, 1, 0, 0, 0},
+                                           {1, 0, 0, 1, 0, 0, 1},
+                                           {1, 1, 0, 0, 1, 0, 0},
+                                           {0, 0, 0, 0, 1, 0, 1},
+                                           {0, 1, 0, 1, 0, 0, 2},
+                                           {0, 0, 0, 0, 0, 1, 0} };
 
         Maze maze = new Maze(mazeMatrix);
 
+        System.out.println("\n Follow the path below to get to the cheese: \n");
         System.out.println(maze.solve(new Node(0, 0, null)));
     }
 }
