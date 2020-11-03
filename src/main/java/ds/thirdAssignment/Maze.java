@@ -1,4 +1,4 @@
-package ds.ThirdAssignment;
+package ds.thirdAssignment;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -8,8 +8,8 @@ public class Maze {
     private final int[][] mazeMatrix;
 
     /**
-     * Constructing a maze using a matrix. In matrix, 0 means open space, 1 means block, 2 means exit.
-     * @param mazeMatrix given maze represented as matrix.
+     * Constructs a maze using a matrix. In matrix, 0 means open space, 1 means block, 2 means exit.
+     * @param mazeMatrix input maze represented as matrix.
      */
     public Maze(int[][] mazeMatrix) {
         validateMatrix(mazeMatrix);
@@ -21,13 +21,13 @@ public class Maze {
     private void validateMatrix(int[][] matrix) {
         int numberOfExits = 0;
 
-        for (int[] ints : matrix) {
-            for (int anInt : ints) {
-                if (anInt == 2) {
+        for (int[] row : matrix) {
+            for (int element : row) {
+                if (element == 2) {
                     numberOfExits++;
                 }
 
-                if (!(anInt == 0 || anInt == 1 || anInt == 2)) {
+                if (!(element == 0 || element == 1 || element == 2)) {
                     throw new IllegalArgumentException("The given matrix is invalid. Available numbers are: 0, 1, 2");
                 }
             }
