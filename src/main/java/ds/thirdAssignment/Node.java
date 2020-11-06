@@ -17,11 +17,27 @@ public class Node {
         this.previousNode = previousNode;
     }
 
+    /**
+     * Gets x axis of the node.
+     * @return x axis of the node.
+     */
     public int getX() { return x; }
 
+    /**
+     * Gets y axis of the node.
+     * @return y axis of the node.
+     */
     public int getY() { return y; }
 
+    /**
+     * Gets the previous node that is connected this node.
+     * @return the previous node that is connected to this node.
+     */
     public Node getPreviousNode() { return previousNode; }
 
+    /**
+     * String representation of a node.
+     * @return string representation of a node.
+     */
     public String toString() { return "(" + this.x + ", " + this.y + ")"; }
 }
